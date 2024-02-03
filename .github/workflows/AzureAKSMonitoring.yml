@@ -52,13 +52,10 @@ jobs:
       - name: Terraform Output
         run: terraform output
 
-      - name: AKS Monitroing Enabler
-        run: 
-          helm repo update
+       - name: AKS Monitroing Enabler
+        run: |
+          az aks get-credentials -n "cluster-definite-seahorse" -g "rg-hip-urchin"
           helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
           helm repo update
-          helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-          helm repo update
-          helm install prometheus-operator prometheus-community/kube-prometheus-stack -f values.yaml --namespace monitoring
-          helm repo update
+          helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
           rm -rf ~/.kube
