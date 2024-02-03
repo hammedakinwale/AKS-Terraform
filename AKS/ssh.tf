@@ -1,3 +1,4 @@
+# Creating ssh API KEY requred to spin up the aks clustter
 resource "random_pet" "ssh_key_name" {
   prefix    = "ssh"
   separator = ""

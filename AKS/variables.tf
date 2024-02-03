@@ -1,3 +1,4 @@
+# Creating variables for managing the resources
 variable "resource_group_location" {
   type        = string
   default     = "eastus"

@@ -1,3 +1,4 @@
+# communicating terraform cloud with Azure DevOps
 terraform {
   required_version = ">=1.0"
 
