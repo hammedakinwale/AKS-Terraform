@@ -54,7 +54,7 @@ jobs:
 
       - name: AKS Monitroing Enabler
         run: |
-          Run helm repo update az aks get-credentials -n "cluster-definite-seahorse" -g "rg-hip-urchin"
+          helm repo update az aks get-credentials -n "cluster-definite-seahorse" -g "rg-hip-urchin"
           helm repo update
           helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
           helm repo update
