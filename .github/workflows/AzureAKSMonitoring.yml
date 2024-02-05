@@ -53,6 +53,7 @@ jobs:
         run: terraform output
 
       - name: AKS Monitroing Enabler
+<<<<<<< HEAD
         run:
           az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
           helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
